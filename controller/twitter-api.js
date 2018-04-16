@@ -39,9 +39,16 @@ router.get('/tweets/:username', (req, res) => {
 
         } else {
 
+
             // CALLBACK: If there are tweets for {username}, run them through
             // Aylien sentiment analysis API and return new data.
             getSentiment(tweets, (tweetsWithSentiments) => {
+
+                if(!tweetsWithSentiments){
+                    res.json({
+                        usersTweets: tweets
+                    });
+                }
 
                 // Sort in Descending Order
                 const sortedUsersTweets = tweetsWithSentiments.sort((a, b) => b.id - a.id);
@@ -156,6 +163,7 @@ function getTweets(username, cb) {
                 }
             });
 
+
             cb(data);
         }
 
@@ -163,6 +171,7 @@ function getTweets(username, cb) {
 }
 
 function getSentiment(tweetsArr, cb) {
+
     const tweetsArrLength = tweetsArr.length;
     const tweets = [];
 
@@ -171,6 +180,10 @@ function getSentiment(tweetsArr, cb) {
             'text': tweet.text,
             'mode': 'tweet'
         }, function (err, res) {
+            if (err) {
+                console.log(err);
+                cb(false);
+            }
             if (err === null) {
                 tweet.sentiment = res.polarity;
                 tweet.confidence = res.polarity_confidence;
