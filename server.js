@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require("morgan");
-require('dotenv-safe').config();
+require('dotenv-safe').config({allowEmptyValues: true});
 
 const app = express();
 
