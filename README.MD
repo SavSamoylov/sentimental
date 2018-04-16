@@ -2,6 +2,8 @@
 ---
 ##### Go to [Live Version of the Site](https://sentimental-sav.herokuapp.com/)
 
+![Alt text](/client/public/demo.gif?raw=true "Search Results and Favoriting Functionality")
+
 ### About:
 ##### The application uses [Twitter API](https://developer.twitter.com/) and [Aylien Text Analysis API](https://aylien.com/text-api/) to provide the user with a sentiment analysis of the searched for Username as well as a sentiment analysis of that users mentions.
 
