@@ -200,7 +200,7 @@ function getSentiment(tweetsArr, cb) {
 function getPublicTweets(username, cb) {
 
     const params = {
-        q: username,
+        q: '@'+username,
         count: 19,
         result_type: "recent",
         include_entities: false
