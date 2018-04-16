@@ -9,8 +9,8 @@
     "start": "concurrently \"nodemon server.js\" \"npm run test\" \"npm run client\"",
     "test": "mocha",
     "build": "cd client && npm run build",
-    "deploy": "npm run build && git add . && git commit -m \"Building for production\" && git push heroku master"
-
+    "deploy": "npm run build && git add . && git commit -m \"Building for production\" && git push heroku master",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
