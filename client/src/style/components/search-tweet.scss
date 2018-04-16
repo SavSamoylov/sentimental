@@ -1,0 +1,40 @@
+$block: 'search-tweet';
+
+.#{$block} {
+    padding: 0 rem-calc(30px) 0 rem-calc(80px);
+    height: rem-calc(60px);
+    width: 100%;
+    border: none;
+    font-size: $font-size-medium;
+    outline: none;
+    box-shadow: 0px 3px 25px 0px lighten($color-gray-dark, 60%);
+
+    &:focus {
+        box-shadow: 0px 3px 25px 0px lighten($color-gray-dark, 50%);
+    }
+
+    &::placeholder {
+        color: $color-gray;
+        font-size: $font-size-normal;
+    }
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $color-gray;
+        font-size: $font-size-normal;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+        color: $color-gray;
+        font-size: $font-size-normal;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+        color: $color-gray;
+        font-size: $font-size-normal;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+        color: $color-gray;
+        font-size: $font-size-normal;
+    }
+}
+
+.search-feedback {
+    margin-top: rem-calc(40px);
+}

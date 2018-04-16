@@ -1,0 +1,41 @@
+/// Remove the unit of a length - https://css-tricks.com/snippets/sass/strip-unit-function/
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+
+	@return $number;
+}
+
+
+// Convert 'px' to 'rem'
+// @params {number} - $value
+// @params {number} - $base
+@function rem-calc($value, $base: $font-size-base) {
+	@return ((strip-unit($value) * 1px) / $base) * 1rem;
+}
+
+// Breakpoints
+// @params {string} - $breakpoint
+@mixin 	breakpoint($breakpoint) {
+	@if $breakpoint == smartphone {
+		@media screen and (min-width: $breakpoint-smartphone) { @content; }
+	} @else
+	if $breakpoint == tablet-p {
+		@media screen and (min-width: $breakpoint-tablet-p) { @content; }
+	} @else
+	if $breakpoint == tablet-l {
+		@media screen and (min-width: $breakpoint-tablet-l) { @content; }
+	} @else
+	if $breakpoint == laptop {
+		@media screen and (min-width: $breakpoint-laptop) { @content; }
+	} @else
+	if $breakpoint == desktop {
+		@media screen and (min-width: $breakpoint-desktop) { @content; }
+	} @else
+	if $breakpoint == large-desktop {
+		@media screen and (min-width: $breakpoint-large-desktop) { @content; }
+	}
+}

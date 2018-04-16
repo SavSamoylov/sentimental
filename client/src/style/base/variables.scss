@@ -1,0 +1,60 @@
+//
+// Colors
+//
+$color-white: #ffffff;
+$color-off-white: #fafcfd;
+$color-gray: #747474;
+$color-gray-light: #fbfcfc;
+$color-gray-dark: #575858;
+$color-gray-light: #d7d7d7;
+$color-blue: #3d7ff1;
+$color-blue-dark: #245dc4;
+$color-blue-darker: #20469e;
+$color-blue-darkest: #1d428f;
+$color-pink: #fd99f5;
+$color-pink-light: #feb8f8;
+$color-teal: #87f6fe;
+$color-red: #ec6b52;
+
+$color-text-primary: $color-gray;
+$color-text-secondary: $color-white;
+$color-heading: $color-gray-dark;
+$color-tweet-bg: $color-blue-darker;
+$color-tweet-status-bg: $color-blue-darkest;
+$color-mood-positive: #527eec;
+$color-mood-negative: #ec6b52;
+$color-mood-neutral: $color-teal;
+
+
+//
+// Fonts
+//
+@import url('https://fonts.googleapis.com/css?family=Tajawal:300,400,500,700');
+
+//
+// Typography
+//
+$font-size-base: 16px;
+$font-primary: 'Tajawal', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$font-size-small: .75rem;
+$font-size-normal: 1rem;
+$font-size-medium: 1.333rem;
+$font-size-large: 1.777rem;
+$font-size-xlarge: 2.369rem;
+
+
+//
+// Breakpoints
+//
+$breakpoint-smartphone: 		30rem;   //480
+$breakpoint-tablet-p: 			48rem;   //768
+$breakpoint-tablet-l: 			64rem;   //1024
+$breakpoint-laptop: 			76.5rem; //1224
+$breakpoint-desktop: 			90rem;   //1440
+$breakpoint-large-desktop: 		114rem;  //1824

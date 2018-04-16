@@ -1,0 +1,12 @@
+body {
+    font-size: $font-size-base;
+    font-family: $font-primary;
+    font-weight: $font-weight-normal;
+    background: #e3bbf1;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

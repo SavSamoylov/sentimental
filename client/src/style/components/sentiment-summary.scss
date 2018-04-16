@@ -1,0 +1,135 @@
+$block: 'sentiment-summary';
+
+.#{$block} {
+    background: $color-white;
+    box-shadow: 0px 3px 25px 0px lighten($color-gray-dark, 50%);    
+}
+
+.#{$block}__title {
+    margin: rem-calc(50px) 0 rem-calc(35px);
+}
+
+.#{$block}__header {
+    font-size: $font-size-medium;
+    color: $color-gray-dark;
+    padding: rem-calc(20px);
+    background: darken($color-off-white, 4%);
+    border-bottom: 1px solid darken($color-off-white, 6%);
+
+    span {
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-normal;
+        color: $color-white;
+        margin: 0 0 0 15px;
+        padding: 7px 15px 3px;
+        border-radius: 19px;
+        background: $color-blue;
+
+        &.negative {
+            background: $color-mood-negative;
+        }
+
+        &.positive {
+            background: $color-mood-positive;
+        }
+
+        &.neutral {
+            background: $color-pink;
+        }
+    }
+}
+
+.#{$block}__chart {
+    position: relative;
+    display: block;
+    height: 200px;
+    width: 100%;
+    padding: rem-calc(20px);
+    background: $color-blue;
+    background: linear-gradient($color-blue, $color-blue-dark);
+
+    canvas {
+        width: 100% !important;
+    }
+}
+
+.#{$block}__tweets {
+    margin-top: 50px;
+
+    h4 {
+        margin-bottom: rem-calc(35px);
+
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        display: flex;
+        min-height: rem-calc(100px);
+        padding: rem-calc(20px);
+        margin: 0 0 30px;
+        background: $color-white;
+        box-shadow: 0px 3px 25px 0px lighten($color-gray-dark, 60%);  
+        
+        .tweeter {
+            &-img {
+
+                img {
+                    width: 75px;
+                    height: 75px;
+                }
+            }
+
+            &-tweet {
+                margin-left: rem-calc(30px);
+                padding-left: rem-calc(20px);
+                width: 100%;
+                border-left: 1px solid $color-gray-light;
+
+                &__header {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    strong {
+                        color: $color-gray-dark;
+                    }
+
+                    span {
+                        position: relative;
+                        top: -5px;
+                        display: flex;
+                        color: $color-white;
+                        padding: 10px 10px 5px;
+                        font-weight: $font-weight-bold;
+                        font-size: $font-size-small;
+                        text-transform: uppercase;
+                        border-radius: 20px;
+                        background: $color-mood-negative;
+
+                        &.neutral {
+                            background: $color-pink;
+                        }
+
+                        &.positive {
+                            background: $color-mood-positive;
+                        }
+
+                        &.negative {
+                            background: $color-mood-negative;
+                        }
+                    }
+
+                }
+
+                &__text {
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+}

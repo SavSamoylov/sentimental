@@ -1,0 +1,32 @@
+{
+  "name": "sentimental",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run test\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "concurrently": "^3.5.0",
+    "mocha": "^5.1.0",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "aylien_textapi": "^0.6.0",
+    "body-parser": "^1.18.2",
+    "chart.js": "^2.7.2",
+    "dotenv-safe": "^5.0.1",
+    "express": "^4.16.3",
+    "moment": "^2.22.0",
+    "react-chartjs-2": "^2.7.0",
+    "twitter": "^1.7.1"
+  }
+}
