@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "preinstall": "cd client && npm install",
     "server": "node server.js",
     "client": "node scripts/start-client.js",
     "start": "concurrently \"nodemon server.js\" \"npm run test\" \"npm run client\"",
@@ -19,7 +20,8 @@
     "concurrently": "^3.5.0",
     "mocha": "^5.1.0",
     "morgan": "^1.9.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "webpack": "^4.6.0"
   },
   "dependencies": {
     "aylien_textapi": "^0.6.0",
