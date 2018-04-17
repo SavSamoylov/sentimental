@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "preinstall": "cd client && npm install",
+    "preinstall": "cd client && npm install && cd ..",
     "server": "node server.js",
     "client": "node scripts/start-client.js",
     "start": "concurrently \"nodemon server.js\" \"npm run test\" \"npm run client\"",
